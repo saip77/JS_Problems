@@ -76,3 +76,25 @@ const products = [
   console.log(stocks);
   let val = stocks.reduce((a,b) => a+b);
   console.log(val);
+
+  //5. Names where stock is 0
+
+  const stockNames = products.find(e => e.stock === 0).name;
+  console.log(stockNames);
+
+  //OR
+
+  const unavailable = products.filter(e => e.stock === 0).map(e => e.name);
+  console.log(unavailable);
+
+  //OR
+
+  const notThere = []
+  products.forEach(e =>{
+    if(e.stock === 0)
+    {
+        notThere.push(e.name);
+    }
+    }
+   )
+   console.log(notThere);
