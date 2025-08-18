@@ -40,3 +40,32 @@ const products = [
 
   const shoeSize = shoes.sizes.find(e => e === 9);
   console.log(shoeSize);
+
+  //3.
+
+  const options = products.find(e => e.name === "Laptop")
+                          .variants.map(
+                            e => e.color +" "+ e.storage
+                          )
+  console.log(options);
+
+  //Note:- While using arrow function if you use {} then you need to use return statement
+  let obj1 = {
+    name: products.find(e => e.name === "Laptop").name,
+    options: products.find(e => e.name === "Laptop")
+    .variants.map(
+      e => e.color +" "+ e.storage
+    )
+  }
+  console.log(obj1);
+
+  let obj2 = {
+    name: products.find(e => e.name === "Shoes").name,
+    options: products.find(e => e.name === "Shoes").sizes
+  }
+  console.log(obj2);
+
+  let newarr = [];
+  newarr.push(obj1);
+  newarr.push(obj2);
+  console.log(newarr);
