@@ -27,3 +27,16 @@ const products = [
   console.log(lappy);
   const colors = lappy.variants.map(e  => e.color);
   console.log(colors);
+
+
+  //2. Check if "Shoes" has size 9 available.
+
+  const shoes =  products.find(e => e.name === "Shoes");
+  console.log(shoes);
+  const availableshoeSize = shoes.sizes.includes(9);
+  console.log(availableshoeSize);
+
+  // OR
+
+  const shoeSize = shoes.sizes.find(e => e === 9);
+  console.log(shoeSize);
