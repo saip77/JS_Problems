@@ -41,7 +41,7 @@ const products = [
   const shoeSize = shoes.sizes.find(e => e === 9);
   console.log(shoeSize);
 
-  //3.
+  //3. Array and object combined
 
   const options = products.find(e => e.name === "Laptop")
                           .variants.map(
@@ -69,3 +69,10 @@ const products = [
   newarr.push(obj1);
   newarr.push(obj2);
   console.log(newarr);
+
+  //4. Find all the stocks
+
+  const stocks =  products.map(e => e.stock);
+  console.log(stocks);
+  let val = stocks.reduce((a,b) => a+b);
+  console.log(val);
