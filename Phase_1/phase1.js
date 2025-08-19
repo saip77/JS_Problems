@@ -98,3 +98,13 @@ const products = [
     }
    )
    console.log(notThere);
+
+   //6. Find the price of the product with id 2
+
+   const price = products.find(e => e.id === 2).price;
+   console.log(price);
+
+   //7. Find the price of the product with id 2 and multiply it by 2
+
+   const price2 = products.find(e => e.id === 2).price * 2;
+   console.log(price2);
